@@ -116,8 +116,9 @@ console.log(jobOpenings);
 
 
 
-    {jobOpenings.map(function(elem){
-      return <Card company={elem.companyName} 
+    {jobOpenings.map(function(elem,idx){
+      return <div key={idx}>
+        <Card company={elem.companyName} 
       datePost={elem.datePosted} 
       post={elem.post} 
       tag1={elem.tag1} 
@@ -125,6 +126,7 @@ console.log(jobOpenings);
       pay={elem.pay} 
       location={elem.location} 
       brandLogo={elem.brandLogo} />
+        </div>
       
     })}
     
